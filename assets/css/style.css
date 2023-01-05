@@ -1,0 +1,87 @@
+:root {
+    --darkBG: #343a40;
+    --lightBG: #f8f9fa;
+    --darkText: #343a40;
+    --lightText: #fff;
+}
+
+body {
+    color: var(--lightText);
+    background-color: var(--darkBG);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.info {
+    flex: 1;
+    padding: 10px;
+}
+
+#scores {
+    text-align: center;
+}
+
+#time {
+    text-align: center;
+}
+
+.code-quiz {
+    flex: 1;
+
+}
+
+.buttons button {
+    background-color: #04AA6D; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.buttons:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Prevent double borders */
+.buttons button:not(:last-child) {
+    border-right: none;
+}
+
+/* Add a background color on hover */
+.buttons button:hover {
+    background-color: #3e8e41;
+}
+
+.john {
+    flex: 1;
+}
+
+@media screen and (max-width: 700px) {
+    .info {
+        flex-direction: column;
+    }
+}
