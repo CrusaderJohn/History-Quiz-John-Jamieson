@@ -25,29 +25,21 @@ header {
 main {
     display: flex;
     flex-direction: row;
-}
-
-footer {
-    display: flex;
-    flex-direction: row;
+    justify-content: center;
 }
 
 .info {
     flex: 1;
     padding: 10px;
-}
-
-#scores {
     text-align: center;
 }
 
-#time {
-    text-align: center;
+.visible {
+
 }
 
-.code-quiz {
-    flex: 1;
-
+.hidden {
+    display: none;
 }
 
 .buttons button {
@@ -74,10 +66,6 @@ footer {
 /* Add a background color on hover */
 .buttons button:hover {
     background-color: #3e8e41;
-}
-
-.john {
-    flex: 1;
 }
 
 @media screen and (max-width: 700px) {

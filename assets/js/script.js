@@ -1,26 +1,7 @@
-const buttons = document.querySelector(".buttons");
-const question = document.querySelector(".code-quiz").children[1];
-
-let li1 = document.createElement("button");
-let li2 = document.createElement("button");
-let li3 = document.createElement("button");
-let li4 = document.createElement("button");
+let startDiv = document.getElementById('start');
+let questionDiv = document.getElementById('question');
 
 class questionClass
-{
-    constructor(question, answer, fakes)
-    {
-        this.question = question;
-        this.answer = answer;
-        this.fakes = fakes;
-    }
-    questionList(x)
-    {
-        return this.answer + this.fakes;
-    }
-}
-
-class questionHTML
 {
     constructor(question, answer, fakes)
     {
@@ -52,51 +33,17 @@ const questionThree = new questionClass(
 
 function start()
 {
-    buttons.removeEventListener("click", start);
-    buttons.removeChild(buttons.firstElementChild);
-    question.textContent = questionOne.question;
-    li1.textContent = questionOne.answer;
-    li2.textContent = questionOne.fakes[0];
-    li3.textContent = questionOne.fakes[1];
-    li4.textContent = questionOne.fakes[2];
-    buttons.appendChild(li1);
-    buttons.appendChild(li2);
-    buttons.appendChild(li3);
-    buttons.appendChild(li4);
-    buttons.children[0].addEventListener("click", reset);
-    buttons.children[1].addEventListener("click", reset);
-    buttons.children[2].addEventListener("click", reset);
-    buttons.children[3].addEventListener("click", reset);
+    startDiv.setAttribute('class', 'hidden');
+    questionDiv.setAttribute('class', 'visible');
+    nextQuestion();
 }
 
 function nextQuestion()
 {
-    question.textContent = questionTwo.question;
-    li1.textContent = questionTwo.answer;
-    li2.textContent = questionTwo.fakes[0];
-    li3.textContent = questionTwo.fakes[1];
-    li4.textContent = questionTwo.fakes[2];
-    buttons.appendChild(li1);
-    buttons.appendChild(li2);
-    buttons.appendChild(li3);
-    buttons.appendChild(li4);
-    buttons.children[0].addEventListener("click", reset);
-    buttons.children[1].addEventListener("click", reset);
-    buttons.children[2].addEventListener("click", reset);
-    buttons.children[3].addEventListener("click", reset);
+
 }
 
 function reset()
 {
-    buttons.children[0].removeEventListener("click", reset);
-    buttons.children[1].removeEventListener("click", reset);
-    buttons.children[2].removeEventListener("click", reset);
-    buttons.children[3].removeEventListener("click", reset);
-    buttons.removeChild(buttons.lastElementChild);
-    buttons.removeChild(buttons.lastElementChild);
-    buttons.removeChild(buttons.lastElementChild);
-    li1.textContent = "Start!";
-    buttons.children[0].addEventListener("click", start);
-}
 
-buttons.children[0].addEventListener("click", start);
+}
